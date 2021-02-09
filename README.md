@@ -1,1 +1,1 @@
-Web_Online-Store_Organic-EcoBioMix
+The project of organic food online store created for EcoBioMix company
