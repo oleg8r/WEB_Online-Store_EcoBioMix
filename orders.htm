@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--
+    author:        Oleg Savelev
+    student ID:    060494135
+    created for:   WEB222 Assignment #2
+    due date:      October 31, 2020
+-->
+
+<html lang="en" id="top">
+<!--
+    The above html tag signifies the beginning of this web page.
+    Top ID is used to get back to the top of the page from different places on the page.
+-->
+
+
+    <!--HEAD-->
+    <head>
+        
+        <meta charset="UTF-8" />
+        <!-- 
+		    1) The above meta tag tells the web browser of the character encoding (UTF-8 = Unicode Transformation Format-8) selected for this web page 
+            See http://www.iana.org/assignments/character-sets/character-sets.xml for more character sets.
+            2) This meta tag is mandatory for the assignment submission.
+	    -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--
+            1) The above meta tag tells the web browser to set the viewport of the web page as part of responsive web design.
+            To be properly displayed on different size monitors.
+            2) This meta tag is mandatory for the assignment submission.
+        -->
+
+	    <!--meta http-equiv="refresh" content="0; url=http://www.google.ca/" /-->
+	    <!-- 
+            The above meta tag tells the web browser to load a different web page after zero seconds (immediately.)
+            Please use this meta tag if the website address is changed. Just replace "http://www.google.ca/" with a new website address.
+	    -->
+	
+        <meta name="description" content="Course: WEB222 Topic: Assignment #2">
+        <!-- 
+            The above meta tag provides the web browser a short description of this web page.
+            Several browsers, like Firefox and Opera, use this as the default description of bookmarked pages.
+        -->
+        
+        <meta name="author" content="Oleg Savelev">
+        <!--The above meta tag provides the web browser a short description of this web page.-->
+
+
+        <title>Store Assignment by Oleg Savelev_About</title>
+        <!--The value in the above title tag will appear in the title bar of the web browser.-->
+
+        <style>
+            @import "CSS External Style Sheet.css";
+            hr
+            {
+                height: 10px;
+                background-color: maroon;    
+            }
+        </style>
+
+        <script> 
+
+        function fVerifyInput(evt)
+        {		 
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+    
+            if (charCode >= 48 && charCode <= 57)
+            {
+                return true;
+            }
+            return false;	
+        }
+
+        // ocument.getElementById("txtSIN").onpaste = () => {return false;}
+
+        function fbtnVerify()
+                {		 
+                    alert(`Option ${document.getElementById('selFood').selectedIndex}: "${document.getElementById('selFood').value}" selected.`);
+                }
+
+        </script>
+
+    </head>
+        
+
+    <body>
+        <main>
+            <article>
+
+                <h3>Orders</h3>
+                <h5>Please specify the details of your order:</h5>
+
+                <table class="tb1">
+                    <tr>
+                        <td><b>Product Type</b></td>
+                        <td><b>Product Name</b></td>
+                        <td><b>Number of Items</b></td>
+                    </tr>
+                    <tr>
+                        <td><label>Fruits</label></td>
+<!--
+	
+	select
+	
+	The select tag allows the user to choose one of a set of alternatives described by 
+	textual labels. Every alternative is represented by the <option> element. 
+	
+-->
+                        <td>
+                            <select id="selFood" name="selFood" size="1"> <!--"id" is for a browser and "name" is for a server-->
+                                <option>&nbsp;</option>
+                                <optgroup  label="Fruits">
+                                    <option value="Apple">Apple</option>
+                                    <option value="Pear">Pear</option>
+                                    <option value="Banana">Banana</option>
+                                    <option value="Orange">Orange</option>
+                                    <option value="Tangerine">Tangerine</option>
+                                    <option value="Peach">Peach</option>
+                                    <option value="Plum">Plum</option>
+                                    <option value="Mango">Mango</option>
+                                </optgroup>
+                            </select>
+                        </td>
+                        <td> 
+                            <input id="txtSIN"
+                                maxlength="3" 
+                                onkeypress="return fVerifyInput(event);"
+                                placeholder="999"
+                                size="9"
+                                type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Vegetables</label></td>
+                        <td>
+                            <select id="selVeg" name="selVeg" size="1">
+                                <option>&nbsp;</option>
+                                <optgroup  label="Vegetables">
+                                    <option value="Potato">Potato</option>
+                                    <option value="Carrot">Carrot</option>
+                                    <option value="Tomato">Tomato</option>
+                                    <option value="Onion">Onion</option>
+                                    <option value="Cabbage">Cabbage</option>
+                                    <option value="Pepper">Pepper</option>
+                                    <option value="Mushroom">Mushroom</option>
+                                    <option value="Garlic">Garlic</option>
+                                </optgroup>
+                            </select>
+                        <td> 
+                            <input id="txtSIN2"
+                                maxlength="3" 
+                                onkeypress="return fVerifyInput(event);"
+                                placeholder="999"
+                                size="9"
+                                type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Pastry</label></td>
+                        <td>
+                            <select id="selPastry" name="selPastry" size="1">
+                                <option>&nbsp;</option>
+                                <optgroup  label="Pastry">
+                                    <option value="Bread">Bread</option>
+                                    <option value="Baguette">Baguette</option>
+                                    <option value="Donut">Donut</option>
+                                    <option value="Apple pie">Apple pie</option>
+                                    <option value="Carrot pie">Carrot pie</option>
+                                    <option value="Fruit cake">Fruit cake</option>
+                                    <option value="Croissants">Croissants</option>
+                                    <option value="Cookies">Cookies</option>
+                                </optgroup>
+                            </select>
+                        <td> 
+                            <input id="txtSIN3"
+                                maxlength="3" 
+                                onkeypress="return fVerifyInput(event);"
+                                placeholder="999"
+                                size="9"
+                                type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Drinks</label></td>
+                        <td>
+                            <select id="selDrinks" name="selDrinks" size="1">
+                                <option>&nbsp;</option>
+                                <optgroup  label="Drinks">
+                                    <option value="Milk">Milk</option>
+                                    <option value="Orange juice">Orange juice</option>
+                                    <option value="Apple juice">Apple juice</option>
+                                    <option value="Orange">Orange</option>
+                                    <option value="Pineapple juice">Pineapple juice</option>
+                                    <option value="Mango juice">Mango juice</option>
+                                    <option value="Tomato juice">Tomato juice</option>
+                                </optgroup>
+                            </select>
+                        <td> 
+                            <input id="txtSIN4"
+                                maxlength="3" 
+                                onkeypress="return fVerifyInput(event);"
+                                placeholder="999"
+                                size="9"
+                                type="text" />
+                        </td>
+                    </tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>                   
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button id="btnVerify" onclick="Javascript: alert('Thank you for shopping with us.')">
+                            <!--button id="btnVerify" onclick="fbtnVerify();"-->
+                                Order Now
+                            </button>
+                        </td>
+       
+                        <td>
+                            <button onclick="Javascript: alert('Your order is canceled.')">
+                                Cancel
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+
+            </article>
+        </main>
+    </body>
+</html>
